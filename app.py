@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import requests
+import os
 
 app = Flask(__name__)
 
@@ -67,5 +68,7 @@ def fire_data():
         return jsonify(get_fire_data(place))
     return jsonify({"error": "No place provided"})
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use Render's PORT or default to 5000
+    app.run(host="0.0.0.0", port=port, debug=True)
