@@ -774,10 +774,10 @@
             </form>
         </header>
         
+                <h2 class="text-xl font-semibold mb-4 text-red-800">Fire Data for {{ place }}</h2>
         {% if place %}
         <main class="grid grid-cols-3 gap-6">
             <div class="col-span-2 bg-gradient-to-br from-slate-100 to-orange-50 h-[500px] rounded-lg relative p-4 shadow-md border border-orange-100">
-                <h2 class="text-xl font-semibold mb-4 text-red-800">Fire Data for {{ place }}</h2>
                 <div id="map" class="h-full rounded-lg"></div>
             </div>
             <div class="space-y-4">
